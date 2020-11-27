@@ -1,0 +1,22 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: page-service
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: ly-redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ly-registry:10086/eureka
+
+
+logging:
+  level:
+    # top.javatool.canal: warn # 关闭心跳日志
+    com.leyou: debug # 日志配置
+canal:
+  destination: test
+  server: ly-canal:11111 # canal地址

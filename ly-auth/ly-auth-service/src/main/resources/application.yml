@@ -1,0 +1,30 @@
+server:
+  port: 8082
+spring:
+  redis:
+    host: ly-redis
+  application:
+    name: auth-service
+  profiles:
+    include:
+      oss
+  datasource:
+    url: jdbc:mysql://ly-mysql:3306/heima?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      insert-strategy: not_null
+      update-strategy: not_null
+  type-aliases-package: com.leyou.auth.entity
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ly-registry:10086/eureka
+logging:
+  level:
+    com.leyou: debug
+

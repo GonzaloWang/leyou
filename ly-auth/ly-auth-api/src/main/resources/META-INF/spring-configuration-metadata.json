@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "name": "ly.auth",
+      "type": "com.leyou.auth.config.ClientProperties",
+      "sourceType": "com.leyou.auth.config.ClientProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "ly.auth.clientId",
+      "type": "java.lang.String",
+      "sourceType": "com.leyou.auth.config.ClientProperties",
+      "description": "授权客户端的id"
+    },
+    {
+      "name": "ly.auth.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.leyou.auth.config.ClientProperties",
+      "description": "授权客户端的secret"
+    },
+    {
+      "name": "ly.auth.includeFilterPaths",
+      "type": "java.lang.String",
+      "sourceType": "com.leyou.auth.config.ClientProperties",
+      "description": "登录拦截要包含的路径"
+    },
+    {
+      "name": "ly.auth.secret",
+      "type": "java.lang.excludeFilterPaths",
+      "sourceType": "com.leyou.auth.config.ClientProperties",
+      "description": "登录拦截放行的路径"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,9 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: ly-registry
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ly-registry:10086/eureka

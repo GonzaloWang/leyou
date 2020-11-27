@@ -1,0 +1,31 @@
+server:
+  port: 8081
+spring:
+  jackson:
+    default-property-inclusion: non_null
+  application:
+    name: item-service
+  profiles:
+    include:
+      mysql, redis  # mysql配置自己写个application-mysql.yml配上去
+  rabbitmq:
+    username: heima110
+    password: heima110
+    host: ly-mq
+    virtual-host: /haha
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ly-registry:10086/eureka
+mybatis-plus:
+  type-aliases-package: com.leyou.item.entity # 包扫描
+  # mapper-locations: classpath*: mappers/*.xml # mapper的xml文件地址
+  global-config:
+    db-config:
+      id-type: auto # id默认为自增长
+      update-strategy: NOT_EMPTY # 更新时，只更新非空字段
+      insert-strategy: NOT_EMPTY # 新增时，只新增非空字段
+logging:
+  level:
+    com.leyou: debug

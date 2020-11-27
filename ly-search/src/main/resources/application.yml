@@ -1,0 +1,28 @@
+server:
+  port: 8083
+spring:
+  jackson:
+    default-property-inclusion: non_null
+  application:
+    name: search-service
+  rabbitmq:
+    username: heima110
+    password: heima110
+    host: ly-mq
+    virtual-host: /haha
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ly-registry:10086/eureka
+
+logging:
+  level:
+    com.leyou: debug
+
+elasticsearch:
+  hosts: ly-es:9200
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000

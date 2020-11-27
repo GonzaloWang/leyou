@@ -1,0 +1,12 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: sms-service
+  rabbitmq:
+    host: ly-mq
+    username: leyou
+    password: 123321
+    virtual-host: /leyou
+  profiles:
+    include: oss
